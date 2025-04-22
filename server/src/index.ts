@@ -17,7 +17,7 @@ const app = express();
 // Middleware
 // app.use(cors());
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000',"https://articlesfeed-0hzl.onrender.com"],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true, // Only if you're using cookies

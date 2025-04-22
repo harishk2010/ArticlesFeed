@@ -27,7 +27,7 @@ export const ArticleList: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
+  // const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
   useEffect(() => {
     fetchArticles();
@@ -53,7 +53,7 @@ export const ArticleList: React.FC = () => {
     try {
       await apiService.deleteArticle(articleId);
       setArticles(articles.filter(article => article._id !== articleId));
-      setSelectedArticle(null);
+      // setSelectedArticle(null);
     } catch (err: any) {
       setError(err.response?.data?.message || 'Failed to delete article');
     }

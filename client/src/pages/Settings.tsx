@@ -26,15 +26,15 @@ interface PreferencesFormValues {
 }
 
 // Define user type
-interface User {
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  phone?: string;
-  dateOfBirth?: string;
-  preferences?: string[];
-  profileImage?: string;
-}
+// interface User {
+//   firstName?: string;
+//   lastName?: string;
+//   email?: string;
+//   phone?: string;
+//   dateOfBirth?: string;
+//   preferences?: string[];
+//   profileImage?: string;
+// }
 
 const profileSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
