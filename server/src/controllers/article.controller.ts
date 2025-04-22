@@ -57,11 +57,12 @@ export class ArticleController implements IArticleController {
         res.status(401).json({ message: "Unauthorized" });
         return;
       }
-      console.log(req.user);
-      const validatedData = createArticleSchema.parse(req.body);
+     
+      console.log(req.body)
+      // const validatedData = createArticleSchema.parse(req.body);
       const file = getFileFromRequest(req);
       const article = await this.articleService.createArticle(
-        validatedData,
+        req.body,
         req.user.id,
         file
       );
