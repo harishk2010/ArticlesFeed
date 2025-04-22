@@ -22,13 +22,15 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "rootDir": "./",    // Set root directory to the project root
+    "rootDir": "./",
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node", "express", "cors", "morgan", "bcryptjs", "jsonwebtoken"]
   },
-  "include": ["src/**/*.ts", "db/**/*.ts"],  // Include all TypeScript files in src/ and db/
+  "include": ["src/**/*.ts", "db/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
